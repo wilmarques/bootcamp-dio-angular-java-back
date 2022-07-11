@@ -2,7 +2,7 @@
 
 Back-End para Mentoria Bootcamp DIO - Consumindo APIs a partir de front-end Angular com um back-end Java
 
-- [ ] Extensões básicas
+- [x] Extensões básicas
 - [ ] Preparação do ambiente Gitpod
 - [ ] Criação do projeto
 - [ ] Criação da model/entidade
