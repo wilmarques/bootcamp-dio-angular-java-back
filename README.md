@@ -3,7 +3,7 @@
 Back-End para Mentoria Bootcamp DIO - Consumindo APIs a partir de front-end Angular com um back-end Java
 
 - [x] Extensões básicas
-- [ ] Preparação do ambiente Gitpod
+- [x] Preparação do ambiente Gitpod
 - [ ] Criação do projeto
 - [ ] Criação da model/entidade
 - [ ] Criação do Repository
@@ -13,4 +13,4 @@ Back-End para Mentoria Bootcamp DIO - Consumindo APIs a partir de front-end Angu
 
 ## Referências
 
-- (Building REST services with Spring)[https://spring.io/guides/tutorials/rest/]
+- [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
