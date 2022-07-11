@@ -1,0 +1,17 @@
+[
+  {
+    "_id": "67607ff8-85d5-444a-9594-635fc58204f2",
+    "name": "(Global Env)",
+    "default": false,
+    "global": true,
+    "sortNum": -1,
+    "created": "2022-07-13T18:14:38.150Z",
+    "modified": "2022-07-13T21:06:25.774Z",
+    "data": [
+      {
+        "name": "api-endpoint",
+        "value": "https://8080-wilmarques-bootcampdioa-oem919if26z.ws-us54.gitpod.io/"
+      }
+    ]
+  }
+]
