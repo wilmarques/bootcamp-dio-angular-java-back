@@ -1,0 +1,7 @@
+{
+  "thunder-client.saveToWorkspace": true,
+  "thunder-client.saveRequestOnSend": true,
+  "thunder-client.workspaceRelativePath": ".thunder_client",
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "cSpell.words": ["bootcampdio", "hateoas", "springframework"]
+}
