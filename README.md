@@ -4,7 +4,7 @@ Back-End para Mentoria Bootcamp DIO - Consumindo APIs a partir de front-end Angu
 
 - [x] Extensões básicas
 - [x] Preparação do ambiente Gitpod
-- [ ] Criação do projeto
+- [x] Criação do projeto
 - [ ] Criação da model/entidade
 - [ ] Criação do Repository
 - [ ] Criação da Controller
