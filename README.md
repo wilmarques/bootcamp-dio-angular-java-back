@@ -12,7 +12,7 @@ Back-End para Mentoria Bootcamp DIO - Consumindo APIs a partir de front-end Angu
   - Gerar getters/setter
   - Gerar método toString
   - Decorar com persistence
-- [ ] Criação do Repository
+- [x] Criação do Repository
 - [ ] Criação da Controller
 - [ ] HATEOAS na Controller
 - [ ] Testes com Thunder Client
