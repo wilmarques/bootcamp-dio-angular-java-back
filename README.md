@@ -15,8 +15,8 @@ Back-End para Mentoria Bootcamp DIO - Consumindo APIs a partir de front-end Angu
 - [x] Criação do Repository
 - [x] Pré carga da base H2
 - [x] Criação da Controller
+- [x] Testes com Thunder Client
 - [ ] HATEOAS na Controller
-- [ ] Testes com Thunder Client
 
 ## Referências
 

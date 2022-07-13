@@ -1,0 +1,96 @@
+[
+  {
+    "_id": "e0b2404a-8205-4f39-95d6-4806b344399e",
+    "colId": "9ba4207e-f54c-4ab8-acd1-66e6d7b239da",
+    "containerId": "",
+    "name": "Get All",
+    "url": "{{api-endpoint}}/heroes",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-07-13T17:58:26.106Z",
+    "modified": "2022-07-13T18:11:17.586Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "83f12ae4-397e-4f40-8633-898d3aec6feb",
+    "colId": "9ba4207e-f54c-4ab8-acd1-66e6d7b239da",
+    "containerId": "",
+    "name": "Get First Hero",
+    "url": "{{api-endpoint}}/heroes/1",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-07-13T18:03:35.172Z",
+    "modified": "2022-07-13T18:11:32.680Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "e315d4e0-7bf9-4d1d-83cb-84fce75926e3",
+    "colId": "9ba4207e-f54c-4ab8-acd1-66e6d7b239da",
+    "containerId": "",
+    "name": "Get Third Hero",
+    "url": "{{api-endpoint}}/heroes/3",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2022-07-13T18:03:52.329Z",
+    "modified": "2022-07-13T18:11:40.508Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "36f47406-2172-437c-8e4e-16dbe9f3ef38",
+    "colId": "9ba4207e-f54c-4ab8-acd1-66e6d7b239da",
+    "containerId": "",
+    "name": "Create Hero",
+    "url": "{{api-endpoint}}/heroes",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2022-07-13T18:04:23.934Z",
+    "modified": "2022-07-13T18:11:48.107Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"name\": \"Thunder Shock\",\n    \"description\": \"Solta raios\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "c7f570e1-50d6-4579-9e1d-dee8de979d87",
+    "colId": "9ba4207e-f54c-4ab8-acd1-66e6d7b239da",
+    "containerId": "",
+    "name": "Modify Third Hero",
+    "url": "{{api-endpoint}}/heroes/3",
+    "method": "PUT",
+    "sortNum": 60000,
+    "created": "2022-07-13T18:07:06.389Z",
+    "modified": "2022-07-13T18:12:01.003Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Thunder Shock\",\n  \"description\": \"Até que é legal.\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "f36f25b8-7765-46a3-8df9-39d1880bdeb7",
+    "colId": "9ba4207e-f54c-4ab8-acd1-66e6d7b239da",
+    "containerId": "",
+    "name": "Delete Third Hero",
+    "url": "{{api-endpoint}}/heroes/7",
+    "method": "DELETE",
+    "sortNum": 70000,
+    "created": "2022-07-13T18:07:57.356Z",
+    "modified": "2022-07-13T18:12:34.280Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]

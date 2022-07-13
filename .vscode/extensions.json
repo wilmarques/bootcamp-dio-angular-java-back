@@ -9,6 +9,7 @@
     "pivotal.vscode-boot-dev-pack",
     "pivotal.vscode-spring-boot",
     "vscjava.vscode-spring-initializr",
-    "vscjava.vscode-java-test"
+    "vscjava.vscode-java-test",
+    "rangav.vscode-thunder-client"
   ]
 }

@@ -1,6 +1,11 @@
 image:
   file: .gitpod/Dockerfile
 
+ports:
+  - port: 8080
+    visibility: public
+    onOpen: notify
+
 vscode:
   extensions:
     - vscjava.vscode-java-debug
@@ -14,3 +19,4 @@ vscode:
     - Pivotal.vscode-spring-boot
     - vscjava.vscode-spring-initializr
     - vscjava.vscode-java-test
+    - rangav.vscode-thunder-client
