@@ -8,6 +8,8 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.IanaLinkRelations;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,26 +22,31 @@ import org.springframework.web.bind.annotation.RestController;
 class HeroesController {
 
   private final HeroRepository repository;
+  private final HeroModelAssembler assembler;
 
-  HeroesController(HeroRepository repository) {
+  HeroesController(HeroRepository repository, HeroModelAssembler assembler) {
     this.repository = repository;
+    this.assembler = assembler;
   }
 
   @GetMapping("/heroes")
   CollectionModel<EntityModel<Hero>> all() {
 
     List<EntityModel<Hero>> heroes = repository.findAll().stream()
-        .map(hero -> EntityModel.of(hero,
-            linkTo(methodOn(HeroesController.class).one(hero.getId())).withSelfRel(),
-            linkTo(methodOn(HeroesController.class).all()).withRel("heroes")))
+        .map(assembler::toModel) //
         .collect(Collectors.toList());
 
     return CollectionModel.of(heroes, linkTo(methodOn(HeroesController.class).all()).withSelfRel());
   }
 
   @PostMapping("/heroes")
-  Hero newHero(@RequestBody Hero newHero) {
-    return repository.save(newHero);
+  ResponseEntity<?> newHero(@RequestBody Hero newHero) {
+
+    EntityModel<Hero> entityModel = assembler.toModel(repository.save(newHero));
+
+    return ResponseEntity //
+        .created(entityModel.getRequiredLink(IanaLinkRelations.SELF).toUri()) //
+        .body(entityModel);
   }
 
   @GetMapping("/heroes/{id}")
@@ -48,28 +55,35 @@ class HeroesController {
     Hero heroes = repository.findById(id) //
         .orElseThrow(() -> new HeroNotFoundException(id));
 
-    return EntityModel.of(heroes, //
-        linkTo(methodOn(HeroesController.class).one(id)).withSelfRel(),
-        linkTo(methodOn(HeroesController.class).all()).withRel("heroes"));
+    return assembler.toModel(heroes);
   }
 
   @PutMapping("/heroes/{id}")
-  Hero replaceHero(@RequestBody Hero newHero, @PathVariable Long id) {
+  ResponseEntity<?> replaceHero(@RequestBody Hero newHero, @PathVariable Long id) {
 
-    return repository.findById(id)
-        .map(employee -> {
-          employee.setName(newHero.getName());
-          employee.setDescription(newHero.getDescription());
-          return repository.save(employee);
-        })
+    Hero updatedHero = repository.findById(id) //
+        .map(hero -> {
+          hero.setName(newHero.getName());
+          hero.setDescription(newHero.getDescription());
+          return repository.save(hero);
+        }) //
         .orElseGet(() -> {
           newHero.setId(id);
           return repository.save(newHero);
         });
+
+    EntityModel<Hero> entityModel = assembler.toModel(updatedHero);
+
+    return ResponseEntity //
+        .created(entityModel.getRequiredLink(IanaLinkRelations.SELF).toUri()) //
+        .body(entityModel);
   }
 
   @DeleteMapping("/heroes/{id}")
-  void deleteHero(@PathVariable Long id) {
+  ResponseEntity<?> deleteHero(@PathVariable Long id) {
+
     repository.deleteById(id);
+
+    return ResponseEntity.noContent().build();
   }
 }

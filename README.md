@@ -2,6 +2,8 @@
 
 Back-End para Mentoria Bootcamp DIO - Consumindo APIs a partir de front-end Angular com um back-end Java
 
+> Baseado em: <https://spring.io/guides/tutorials/rest/>.
+
 - [x] Extensões básicas
 - [x] Preparação do ambiente Gitpod
 - [x] Criação do projeto
@@ -16,10 +18,10 @@ Back-End para Mentoria Bootcamp DIO - Consumindo APIs a partir de front-end Angu
 - [x] Pré carga da base H2
 - [x] Criação da Controller
 - [x] Testes com Thunder Client
-- [ ] HATEOAS na Controller
+- [x] HATEOAS
   - [HAL](http://stateless.co/hal_specification.html)
-  - [ ] Alteração básica
-  - [ ] Assembler - Modelagem mais facilitada
+  - [x] Alteração básica
+  - [x] Assembler - Modelagem mais facilitada
 
 ## Referências
 
