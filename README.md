@@ -17,6 +17,9 @@ Back-End para Mentoria Bootcamp DIO - Consumindo APIs a partir de front-end Angu
 - [x] Criação da Controller
 - [x] Testes com Thunder Client
 - [ ] HATEOAS na Controller
+  - [HAL](http://stateless.co/hal_specification.html)
+  - [ ] Alteração básica
+  - [ ] Assembler - Modelagem mais facilitada
 
 ## Referências
 
