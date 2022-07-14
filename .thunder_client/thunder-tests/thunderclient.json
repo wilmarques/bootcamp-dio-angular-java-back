@@ -84,11 +84,11 @@
     "colId": "9ba4207e-f54c-4ab8-acd1-66e6d7b239da",
     "containerId": "",
     "name": "Delete Third Hero",
-    "url": "{{api-endpoint}}/heroes/7",
+    "url": "{{api-endpoint}}/heroes/3",
     "method": "DELETE",
     "sortNum": 70000,
     "created": "2022-07-13T18:07:57.356Z",
-    "modified": "2022-07-13T18:12:34.280Z",
+    "modified": "2022-07-13T21:07:09.076Z",
     "headers": [],
     "params": [],
     "tests": []

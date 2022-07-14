@@ -6,11 +6,11 @@
     "global": true,
     "sortNum": -1,
     "created": "2022-07-13T18:14:38.150Z",
-    "modified": "2022-07-13T18:14:57.067Z",
+    "modified": "2022-07-13T21:06:25.774Z",
     "data": [
       {
         "name": "api-endpoint",
-        "value": "https://8080-wilmarques-bootcampdioa-on0co9ca3v3.ws-us54.gitpod.io/"
+        "value": "https://8080-wilmarques-bootcampdioa-oem919if26z.ws-us54.gitpod.io/"
       }
     ]
   }
